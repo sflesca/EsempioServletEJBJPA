@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="EsempioServletEJBJPA:ear exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/EsempioServletEJBJPA_ear_exploded.ear</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="EsempioServletEJBJPA/javaeeApplication/javaEEApplication" />
+      <element id="directory" name="web.war">
+        <element id="artifact" artifact-name="EsempioServletEJBJPA:war exploded" />
+      </element>
+      <element id="directory" name="ejb.jar">
+        <element id="artifact" artifact-name="EsempioServletEJBJPA:ejb exploded" />
+      </element>
+    </root>
+  </artifact>
+</component>
