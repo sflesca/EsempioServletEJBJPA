@@ -1,6 +1,7 @@
 package psw.servlet;
 
 import org.jboss.weld.context.ejb.Ejb;
+import psw.ejb.CaricaDatiBean;
 import psw.ejb.HelloBean;
 
 import javax.ejb.EJB;
@@ -17,6 +18,9 @@ public class Hello extends HttpServlet {
     @EJB(name="HelloEJB")
     HelloBean eb;
 
+    @EJB(name= "CaricaDatiEJB")
+    CaricaDatiBean cb;
+
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -25,5 +29,6 @@ public class Hello extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         response.getWriter().println(eb.message());
+        cb.caricaTutto();
     }
 }
