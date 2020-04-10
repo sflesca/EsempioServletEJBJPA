@@ -21,7 +21,7 @@ public class Ordine {
 
     private Cliente cliente;
 
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = true)
     public Cliente getCliente() {
         return cliente;
     }

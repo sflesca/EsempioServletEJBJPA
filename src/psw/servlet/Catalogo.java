@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.LinkedList;
 
-@WebServlet(name = "Catalogo", urlPatterns = {"/", "/catalogo"})
+@WebServlet(name = "Catalogo", urlPatterns = {"/catalogo"})
 public class Catalogo extends HttpServlet {
 
     @EJB
