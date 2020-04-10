@@ -1,5 +1,8 @@
 package psw.model;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.LinkedList;
@@ -39,7 +42,11 @@ public class Categoria {
         this.nome = nome;
     }
 
+/*
+    @JsonIgnore
+
     private Collection<Prodotto> prodotti = new LinkedList<Prodotto>();
+
 
     @OneToMany(mappedBy = "categoria")
     public Collection<Prodotto> getProdotti() {
@@ -49,4 +56,6 @@ public class Categoria {
     public void setProdotti(Collection<Prodotto> prodotti) {
         this.prodotti = prodotti;
     }
+
+ */
 }

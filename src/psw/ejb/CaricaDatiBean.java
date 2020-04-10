@@ -69,7 +69,7 @@ public class CaricaDatiBean {
                 p.setQta((new Random()).nextInt(20));
                 em.persist(p);
                 p.setCategoria(c);
-                c.getProdotti().add(p);
+//                c.getProdotti().add(p);
             }
         }
         return true;

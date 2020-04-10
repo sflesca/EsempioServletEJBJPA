@@ -23,4 +23,9 @@ public class CategoriaBean {
         return q.getResultList();
     }
 
+//    public Collection<Categoria> findAllComplete(){
+//        Query q = em.createNamedQuery("findAllCategorieComplete");
+//        return q.getResultList();
+//    }
+
 }

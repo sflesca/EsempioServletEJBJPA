@@ -46,7 +46,7 @@ public class Carrello {
     public void remQta(Prodotto p, int qta){
         if(contenuto.containsKey(p.getId())){
             DettaglioOrdine dt = contenuto.get(p.getId());
-            dt.setQta(dt.getQta()+qta);
+            dt.setQta(dt.getQta()-qta);
             if(dt.getQta()<=0){
                 contenuto.remove(p.getId());
             }
