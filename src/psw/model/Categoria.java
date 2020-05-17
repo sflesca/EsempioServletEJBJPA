@@ -4,9 +4,11 @@ import org.codehaus.jackson.annotate.JsonIgnore;
 
 import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Collection;
 import java.util.LinkedList;
 
+@XmlRootElement
 @Entity
 @NamedQueries({
         @NamedQuery(name = "findAllCategorie", query = "select c from Categoria c")

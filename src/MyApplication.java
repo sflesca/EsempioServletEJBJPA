@@ -1,4 +1,6 @@
+import psw.rest.ArticoloRS;
 import psw.rest.CategoriaRS;
+import psw.rest.CorsFilter;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
@@ -14,6 +16,8 @@ public class MyApplication extends Application{
     public Set<Class<?>> getClasses() {
         HashSet h = new HashSet<Class<?>>();
         h.add( CategoriaRS.class );
+        h.add( ArticoloRS.class );
+        h.add(CorsFilter.class);
         return h;
     }
 }

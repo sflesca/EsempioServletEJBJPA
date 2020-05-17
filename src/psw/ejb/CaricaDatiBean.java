@@ -34,6 +34,17 @@ public class CaricaDatiBean {
                 {"Francesco", "Filippo"}};
         for (int i= 0; i< gruppi.length; i++)
             creaGruppo(gruppi[i], persone[i]);
+
+
+        Articolo art = new Articolo();
+        art.setTitolo("Titolo 1");
+        art.setTesto("bla bla");
+        em.persist(art);
+        art = new Articolo();
+        art.setTitolo("Titolo 2");
+        art.setTesto("bla bla bla");
+        em.persist(art);
+
         return true;
     }
 

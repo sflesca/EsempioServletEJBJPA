@@ -1,10 +1,15 @@
 package psw.model;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Collection;
 import java.util.LinkedList;
 
+@XmlRootElement
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "findAllArticoli", query = "select a from Articolo a")
+})
 public class Articolo {
 
     @GeneratedValue
@@ -31,36 +36,24 @@ public class Articolo {
     }
 
     @Basic
-    private String corpo;
+    private String testo;
 
-    public String getCorpo() {
-        return corpo;
+    public String getTesto() {
+        return testo;
     }
 
-    public void setCorpo(String corpo) {
-        this.corpo = corpo;
+    public void setTesto(String testo) {
+        this.testo = testo;
     }
 
-    @OneToMany(mappedBy = "art")
-    private Collection<Commento> commenti = new LinkedList<Commento>();
+    @Basic
+    private int likes = 0;
 
-    public Collection<Commento> getCommenti() {
-        return commenti;
+    public int getLikes() {
+        return likes;
     }
 
-    public void setCommenti(Collection<Commento> commenti) {
-        this.commenti = commenti;
-    }
-
-    @ManyToOne(optional = false)
-    @JoinColumn
-    private Cliente cliente;
-
-    public Cliente getCliente() {
-        return cliente;
-    }
-
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    public void setLikes(int likes) {
+        this.likes = likes;
     }
 }

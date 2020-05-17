@@ -15,8 +15,8 @@ import java.util.Collection;
 // The Java class will be hosted at the URI path "/helloworld"
 @RequestScoped
 @Path("/categoriars")
-@Produces({ "application/json" })
-@Consumes({ "application/json" })
+@Produces({ "application/xml" })
+@Consumes({ "application/xml" })
 public class CategoriaRS {
 
     @EJB
